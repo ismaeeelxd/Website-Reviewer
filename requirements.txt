@@ -1,3 +1,5 @@
 gdown
 pandas
 pyyaml
+scikit-learn
+tensorflow
