@@ -1,0 +1,11 @@
+data:
+  file_id: "1hB2f-0YxFxacfJ3sbvZSY2W8uDN4Cx43"
+  raw_path: "data/train.csv"
+  output_dir: "data"
+analysis:
+  analysis_logs: true
+  target_col: "review"
+preprocessing:
+  enable: true
+  method: "oversample"
+  output_path: "data/train_balanced.csv"
