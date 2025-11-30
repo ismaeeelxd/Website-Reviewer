@@ -7,5 +7,6 @@ analysis:
   target_col: "review"
 preprocessing:
   enable: true
-  method: "oversample"
+  method: "class_weights" # Options: "oversample", "undersample", "class_weights"
   output_path: "data/train_balanced.csv"
+  weights_path: "data/class_weights.json"

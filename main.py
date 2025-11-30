@@ -27,11 +27,10 @@ def main():
     if preprocessing_config['enable']:
         from src.preprocessor import DataPreprocessor
         
-        output_path = preprocessing_config['output_path']
-        preprocessor = DataPreprocessor(output_path)
+        preprocessor = DataPreprocessor(preprocessing_config)
         
-        balanced_df = preprocessor.balance_classes(analyzer.df, target_col)
-        preprocessor.save_data(balanced_df)
+        processed_df = preprocessor.process(analyzer.df, target_col)
+        preprocessor.save_data(processed_df)
         
 if __name__ == "__main__":
     main()
